@@ -63,16 +63,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            /* Make all boxes the same size */
+            min-height: 100px;
+            height: 100px;
         }
         .category-title {
-            font-size: 1.8rem;
-            min-height: 80px; /* Ensure consistent height for category titles */
+            font-size: 1.4rem;
             color: #FFD700;
             text-transform: uppercase;
+            line-height: 1.2;
         }
         .question-value {
-            font-size: 2.5rem;
-            min-height: 100px; /* Ensure consistent height for question values */
+            font-size: 2.2rem;
             color: #FFFFFF;
         }
         .question-value:hover, .category-title:hover {
@@ -169,13 +171,15 @@
             .jeopardy-board {
                 grid-template-columns: repeat(3, 1fr); /* 3 columns on smaller screens */
             }
+            .category-title, .question-value {
+                min-height: 80px;
+                height: 80px;
+            }
             .category-title {
-                font-size: 1.2rem;
-                min-height: 60px;
+                font-size: 1.1rem;
             }
             .question-value {
                 font-size: 1.8rem;
-                min-height: 80px;
             }
             .modal-content {
                 width: 95%;
@@ -203,13 +207,15 @@
                 grid-template-columns: repeat(2, 1fr); /* 2 columns on very small screens */
                 gap: 10px;
             }
+            .category-title, .question-value {
+                min-height: 70px;
+                height: 70px;
+            }
             .category-title {
-                font-size: 1rem;
-                min-height: 50px;
+                font-size: 0.9rem;
             }
             .question-value {
                 font-size: 1.5rem;
-                min-height: 70px;
             }
         }
     </style>
